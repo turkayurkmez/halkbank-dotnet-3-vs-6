@@ -4,6 +4,7 @@
 
 using NewFeaturesOfCsharp;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 
 void doIt()
 {
@@ -43,7 +44,6 @@ Action<string> write = Console.Write;
 var output = object (bool isSuccess) => isSuccess ? 0 : "İşlem başarısız";
 #endregion
 
-
 #region Struct üzerindeki değişiklikler
 ProductRecord record1 = new ProductRecord(1, "X", 10);
 ProductRecord record2 = new ProductRecord(1, "X", 10);
@@ -76,6 +76,78 @@ Console.WriteLine($"Adresin sahibi {customer?.Name}");
 
 #endregion
 
+#region Tuples, mix decleration, deconstructions
+Tuple<int, int> divide(int number1, int number2)
+{
+    Tuple<int, int> result = Tuple.Create(number1 / number2, number1 % number2);
+    return result;
 
+    //return number1 / number2; 
+}
 
+(int, int) groupingDivide(int number1, int number2)
+{
 
+    return (number1 / number2, number1 % number2);
+
+    //return number1 / number2; 
+}
+
+var divideResult = divide(14, 3);
+
+(int bolumSonucu, int kalan) = (divideResult.Item1, divideResult.Item2);
+
+int p, q;
+(p, q) = (5, 10);
+(string a, string b) = ("Türkay", "Ürkmez");
+(p, bool isOk) = (90, false);
+
+(int sonuc, int mod) = groupingDivide(14, 3);
+
+Console.WriteLine($"Sonuç: {sonuc} Kalan:{mod}");
+#endregion
+
+#region Property Pattern artık daha güçlü!
+
+foreach (object customer1 in customers)
+{
+
+    //Customer client = (Customer)customer1;
+
+    //if (client.Address.City == "İstanbul")
+    //{
+    //    Console.WriteLine(client.Name);
+    //}
+
+    if (customer1 is Customer { Address.City: "İstanbul" })
+    {
+        Console.WriteLine(((Customer)customer1).Name);
+    }
+}
+
+#endregion
+
+#region Caller Argument Expression attribute'u geldi!
+
+void CheckCondition(bool condition, [CallerArgumentExpression(nameof(condition))] string? logMessage = null)
+{
+    Console.WriteLine($"Parametreye gönderilen koşul: {logMessage}. Sonuç ise {condition}");
+}
+(int a1, int b1) = (5, 3);
+CheckCondition(a1 > b1);
+string test = "test";
+CheckCondition(test.Length < 2);
+
+#endregion
+
+#region Exception Guards
+void SaveCustomer(Customer customer)
+{
+    //if (customer is null)
+    //{
+    //    throw new ArgumentNullException();
+    //}
+    ArgumentNullException.ThrowIfNull(customer);
+}
+
+#endregion
