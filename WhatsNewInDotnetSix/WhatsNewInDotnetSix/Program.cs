@@ -52,7 +52,7 @@ Console.WriteLine();
 
 
 #region yeni Fonksiyon: TryGetNonEnumeratedCount
-var collection = Enumerable.Range(1, 10);
+var collection = Enumerable.Range(1, 15);
 var totalCount = collection.Count(x => x % 3 == 0);
 var countInCollect = collection.TryGetNonEnumeratedCount(out int count) ? count : 0;
 Console.WriteLine($"Toplam eleman sayısı (TryGetNonEnumeratedCount .net 6.0 ile geldi): {countInCollect}");
@@ -90,6 +90,36 @@ foreach (var item in chunks)
 }
 #endregion
 
+Console.WriteLine();
+#region Index ve Range objeleri LINQ'de kullanılabiliyor
 
+var lastItem = collection.ElementAt(^1);
+Console.WriteLine($"İlk eleman:{collection.ElementAt(0)} son eleman ise {lastItem}");
+Console.WriteLine($"İlk üç eleman: {string.Join(",", collection.Take(..3))}");
+Console.WriteLine($"6. elemandan son elemana: {string.Join(",", collection.Take(6..))}");
+Console.WriteLine($"6. elemandan son elemana: {string.Join(",", collection.Take(^4..))}");
+
+
+
+#endregion
+
+var firstOrNegative = collection.FirstOrDefault(x => x > 10, -1);
+Console.WriteLine($"First Or Default: {firstOrNegative}");
+//var firstOrDefault = customers.FirstOrDefault(c => c.Id == 10, new Customer { Id = 0, Name = "Varsayılan müşteri" });
+var singleOrNegative = collection.SingleOrDefault(x => x > 14, -1);
+Console.WriteLine($"Single Or Default: {singleOrNegative}");
+
+
+
+
+#endregion
+
+
+#region Yeni tipler: DateOnly ve TimeOnly
+var customer = new Customer() { Id = 4, Country = "Türkiye", Name = "Arçelik" };
+customer.RegisterDate = new DateOnly(2024, 1, 1);
+Console.WriteLine(customer.RegisterDate.ToLongDateString());
+customer.MeanProcessTime = new TimeOnly(3, 45, 20, 98);
+Console.WriteLine(customer.MeanProcessTime.ToShortTimeString());
 
 #endregion

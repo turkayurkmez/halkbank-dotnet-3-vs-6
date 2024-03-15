@@ -12,6 +12,10 @@ namespace WhatsNewInDotnetSix
         public string Name { get; set; }
         public decimal Budget { get; set; }
         public string Country { get; set; }
+
+        public DateOnly RegisterDate { get; set; }
+        public TimeOnly MeanProcessTime { get; set; }
+
     }
     public class CustomerService
     {
