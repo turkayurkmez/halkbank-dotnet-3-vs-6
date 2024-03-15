@@ -1,0 +1,17 @@
+{
+  "EventId": 0,
+  "LogLevel": "Information",
+  "Category": "WhatsNewInASPdotnetSix",
+  "Message": "AppName: WhatsNewInASPdotnetSix\nWebRoot:C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\wwwroot\nContent:C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\\nEnvName:Development",
+  "State": {
+    "Message": "AppName: WhatsNewInASPdotnetSix\nWebRoot:C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\wwwroot\nContent:C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\\nEnvName:Development",
+    "{OriginalFormat}": "AppName: WhatsNewInASPdotnetSix\nWebRoot:C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\wwwroot\nContent:C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\\nEnvName:Development"
+  }
+}
+{
+  "EventId": 14,
+  "LogLevel":"Information","Category":"Microsoft.Hosting.Lifetime","Message":"Now listening on: https://localhost:7025","State":{"Message":"Now listening on: https://localhost:7025","address":"https://localhost:7025","{OriginalFormat}":"Now listening on: {address}"}}
+{"EventId":14,"LogLevel":"Information","Category":"Microsoft.Hosting.Lifetime","Message":"Now listening on: http://localhost:5072","State":{"Message":"Now listening on: http://localhost:5072","address":"http://localhost:5072","{OriginalFormat}":"Now listening on: {address}"}}
+{"EventId":0,"LogLevel":"Information","Category":"Microsoft.Hosting.Lifetime","Message":"Application started. Press Ctrl\u002BC to shut down.","State":{"Message":"Application started. Press Ctrl\u002BC to shut down.","{OriginalFormat}":"Application started. Press Ctrl\u002BC to shut down."}}
+{"EventId":0,"LogLevel":"Information","Category":"Microsoft.Hosting.Lifetime","Message":"Hosting environment: Development","State":{"Message":"Hosting environment: Development","envName":"Development","{OriginalFormat}":"Hosting environment: {envName}"}}
+{"EventId":0,"LogLevel":"Information","Category":"Microsoft.Hosting.Lifetime","Message":"Content root path: C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\","State":{"Message":"Content root path: C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\","contentRoot":"C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\MigrateFromTwoVersions\\Group 6\\WhatsNewInASPdotnetSix\\WhatsNewInASPdotnetSix\\","{OriginalFormat}":"Content root path: {contentRoot}"}}
